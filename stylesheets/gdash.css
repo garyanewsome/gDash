@@ -1,0 +1,78 @@
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+#body {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #DDDDDD;
+  color: #000000; }
+  #body::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+#header {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  font-family: Georgia, serif;
+  font-size: 2em;
+  text-align: center; }
+  #header:last-child {
+    margin-right: 0; }
+
+#main {
+  text-align: left;
+  font-size: 1.25em; }
+
+#links {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%; }
+  #links:last-child {
+    margin-right: 0; }
+
+#todos {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%; }
+  #todos:last-child {
+    margin-right: 0; }
+
+#notes {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%; }
+  #notes:last-child {
+    margin-right: 0; }
+
+#footer {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  text-align: center; }
+  #footer:last-child {
+    margin-right: 0; }
+
+@media screen and (max width: 768px) {
+  #links, #todos, #notes {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%; }
+    #links:last-child, #todos:last-child, #notes:last-child {
+      margin-right: 0; } }
+
+h4 {
+  text-align: center; }
+
+/*# sourceMappingURL=gdash.css.map */
