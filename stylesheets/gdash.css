@@ -4,13 +4,13 @@ html {
 *, *::after, *::before {
   box-sizing: inherit; }
 
-#body {
+body {
   max-width: 68em;
   margin-left: auto;
   margin-right: auto;
   background-color: #DDDDDD;
   color: #000000; }
-  #body::after {
+  body::after {
     clear: both;
     content: "";
     display: table; }
@@ -75,7 +75,7 @@ html {
   margin: 10px;
   border: 3px solid #800000;
   border-radius: .625em; }
-  @media screen and (max width: 768px) {
+  @media screen and (max-width: 768px) {
     #links, #todos, #notes {
       float: left;
       display: block;

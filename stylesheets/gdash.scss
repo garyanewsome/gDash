@@ -4,8 +4,8 @@
 @import "neat/neat";
 
 
-#body{
-	@include outer-container();
+body{
+	@include outer-container;
 	background-color: #DDDDDD;	
 	color: #000000;
 }
@@ -48,7 +48,7 @@
 	border: 3px solid #800000;
 	border-radius: .625em;
 
-	@media screen and (max width: 768px){
+	@media screen and (max-width: 768px){
 		@include span-columns(12 of 12);
 	}
 }
