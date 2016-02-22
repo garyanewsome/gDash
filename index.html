@@ -9,12 +9,14 @@
 <link rel="shortcut icon" href="images/gfavicon.ico" type="image/x-icon"> <!-- favicon -->
 <link href="stylesheets/gdash.css" rel="stylesheet">
 <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="http://s.codepen.io/assets/libs/modernizr.js" type="text/javascript"></script>
 </head>
 
 <body>
 	<header id="header">
 		<h1>GREETING - NAME</h1>
-		<h3>Currently the weather in your area is: WEATHER</h3>
+		<h3>Currently the weather is: <span id="weather"> F </span></h3>
 	</header>
 
 <main id="main">
@@ -62,5 +64,6 @@
 	gDash was created by Gary A. Newsome, in cahoots with Paul Scarrone and SavvySoftWorks.<br>
   &copy2016
 </footer>
+<script src="gdash.js"></script>
 </body>
 </html>

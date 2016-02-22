@@ -27,15 +27,15 @@ body{
 }
 
 #links{
-	@include span-columns(4 of 12);
+	@include span-columns(4);
 }
 
 #todos{
-	@include span-columns(4 of 12);
+	@include span-columns(4);
 }
 
 #notes{
-	@include span-columns(4 of 12);
+	@include span-columns(4);
 }
 
 #footer{
