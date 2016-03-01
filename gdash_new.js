@@ -54,9 +54,9 @@ var requestWeatherByZip = function(result){
 var showPosition = function(result) {
   console.log("hi ", result);
   var radarImg = result.query.results.location.radar.image_url;
-  //var zipCode = result.query.results.location.zip;
+  var zipCode = result.query.results.location.zip;
   document.getElementById("radar").src=radarImg;
-  //document.getElementById("postal").src=zipCode;
+ 	document.getElementById("zip").innerHTML = zipCode; 
 };
 
 
