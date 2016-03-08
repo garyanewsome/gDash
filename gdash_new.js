@@ -6,6 +6,7 @@ var getLocation = function(resolve, reject) {
         weatherLocation.innerHTML = "Geolocation is not supported by this browser.";
         reject();
     }
+    console.log("getLocation");
 }
 
 var buildYQLlocationQuery = function(position){
@@ -14,9 +15,10 @@ var buildYQLlocationQuery = function(position){
   	var encodedQuery = encodeURIComponent(query);
   	var uri = "https://query.yahooapis.com/v1/public/yql?q="+encodedQuery+"&format=json"//&callback=userLocation";
 
+  	console.log("buildYQLlocationQuery");
 		console.log(uri);
 		console.log(encodedQuery);
-		console.log(">-<o");
+		
 
   	jQuery.ajax({
     	url:uri,
@@ -38,9 +40,9 @@ var requestWeatherByZip = function(result){
 	  var encodedQuery = encodeURIComponent(query);
 	  var uri = "https://query.yahooapis.com/v1/public/yql?q="+encodedQuery+"&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys"//&callback=userLocation";
 
+	  console.log("requestWeatherByZip");
 		console.log(uri);
 		console.log(encodedQuery);
-		console.log("\\o/");
 		console.log(postal);
 
 	  jQuery.ajax({
@@ -52,14 +54,15 @@ var requestWeatherByZip = function(result){
 };
 
 var showPosition = function(result) {
-  console.log("hi ", result);
+	console.log("showPosition");
+  console.log(result);
   var radarImg = result.query.results.location.radar.image_url;
   var zipCode = result.query.results.location.zip;
   document.getElementById("radar").src=radarImg;
  	document.getElementById("zip").innerHTML = zipCode; 
 };
 
-
+console.log("The Promise Land");
 var browserLocation = new Promise(getLocation);
 
 browserLocation
