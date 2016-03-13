@@ -67,7 +67,33 @@ var showPosition = function(result) {
 console.log("The Promise Land");
 var browserLocation = new Promise(getLocation);
 
-browserLocation
-	.then(buildYQLlocationQuery)
-	.then(requestWeatherByZip)
-	.then(showPosition);
+// if time 15 min (15*60*1000)
+var store = localStorage;
+if(store.lastRequestTime){
+	var lastRequestTime = store.lastRequestTime;
+	var currentTime = new Date().getTime();
+	var lastRequestExpired = lastRequestTime + (60 * 15 * 1000);
+	if(lastRequestExpired <  currentTime){
+		browserLocation
+		.then(buildYQLlocationQuery)
+		.then(requestWeatherByZip)
+		.then(showPosition);
+		store.lastRequestTime = new Date().getTime();
+	} else {
+		var result = {};
+				result.query = {};
+				result.query.results = {};
+				result.query.results.current_observation = {};
+				result.query.results.current_observation.temperature_string = store.temperature_string;
+		showPosition(result);
+	}
+} else {
+	browserLocation
+		.then(buildYQLlocationQuery)
+		.then(requestWeatherByZip)
+		.then(showPosition);
+	store.lastRequestTime = new Date().getTime();
+}
+
+
+
