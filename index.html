@@ -1,70 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<title>gDash - Home</title>
-<meta charset="utf-8">
-<meta name="author" content="Gary A. Newsome">
-<meta name="description" content="">
-<link rel="icon" href="images/gfavicon.ico" type="image/x-icon"> <!-- favicon -->
-<link rel="shortcut icon" href="images/gfavicon.ico" type="image/x-icon"> <!-- favicon -->
-<link href="stylesheets/gdash.css" rel="stylesheet">
-<script src="./node_modules/jquery/dist/jquery.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script src="http://s.codepen.io/assets/libs/modernizr.js" type="text/javascript"></script>
-</head>
+    <head>
+        <title>
+            gDash - Home
+        </title>
+        <meta charset="utf-8"/>
+        <meta name="author" content="Gary A. Newsome"/>
+        <meta name="description" content=""/>
+        <link rel="icon" href="images/gfavicon.ico" type="image/x-icon"/>
+        <!-- favicon -->
+        <link rel="shortcut icon" href="images/gfavicon.ico" type="image/x-icon"/>
+        <!-- favicon -->
+        <link href="stylesheets/gdash.css" rel="stylesheet"/>
+        <script src="./node_modules/jquery/dist/jquery.min.js">
+        </script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+        </script>
+        <script src="http://s.codepen.io/assets/libs/modernizr.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <header id="header">
+            <h1>
+                GREETING - NAME
+            </h1>
+            <h3>
+                Currently the weather is:
+            </h3>
+            <h2 id="current">
+            </div>
+        </h2>
+        <img id="radar"/>
+    </header>
+    <main id="main">
+        <div id="workflows">
+            <a href="index.html" class="button" target="_blank">
+                Workflow
+            </a>
+            <a href="index.html" class="button" target="_blank">
+                Workflow
+            </a>
+            <a href="index.html" class="button" target="_blank">
+                Workflow
+            </a>
+            <a href="index.html" class="button" target="_blank">
+                Workflow
+            </a>
+            <br/>
+            <br/>
+        </div>
+        <div id="links">
+            <h4>
+                Column left - Quick Links
+            </h4>
+            <ul>
+                <li>
+                    Link
+                </li>
+                <li>
+                    Link
+                </li>
+                <li>
+                    Link
+                </li>
+                <li>
+                    Link
+                </li>
+                <li>
+                    Link
+                </li>
+            </ul>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+        </div>
+        <div id="todos">
+            <h4>
+                Column center - Todo List
+            </h4>
+            <ul>
+                <li>
+                    Todo
+                </li>
+                <li>
+                    Todo
+                </li>
+                <li>
+                    Todo
+                </li>
+                <li>
+                    Todo
+                </li>
+                <li>
+                    Todo
+                </li>
+            </ul>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+        </div>
+        <div id="notes">
+                    <h4>
+                Column right - Notepad
+            </h4>
+            <textarea id="myNotes" name="notes" rows="20" cols="45" placeholder="gDash notes...">
+            </textarea>
+            <input type="button" id="saveButton" value="Save Note" />
 
-<body>
-	<header id="header">
-		<h1>GREETING - NAME</h1>
-		<h3>Currently the weather is:</h3>
-    <h2 id="zip"></div></h2>
-    <img id="radar"/>
-	</header>
-
-<main id="main">
-  <div id="workflows">
-    <a href="index.html" class="button" target="_blank">Workflow</a>
-    <a href="index.html" class="button" target="_blank">Workflow</a>
-    <a href="index.html" class="button" target="_blank">Workflow</a>
-    <a href="index.html" class="button" target="_blank">Workflow</a>
-    <br><br>
-  </div>
- 	<div id="links">
- 		<h4>Column left - Quick Links</h4>
- 		<ul>
- 			<li>Link</li>
- 			<li>Link</li>
- 			<li>Link</li>
- 			<li>Link</li>
- 			<li>Link</li>
- 		</ul>
- 		<br><br><br><br>
-  	</div>
-  	<div id="todos">
-  		<h4>Column center - Todo List</h4>
-  		<ul>
-  			<li>Todo</li>
-  			<li>Todo</li>
-  			<li>Todo</li>
-  			<li>Todo</li>
-  			<li>Todo</li>
-  		</ul>
-  		<br><br><br><br>
-  	</div>
-  	<div id="notes">
-
-  		<h4>Column right - Notepad</h4>
-  		<p>Scribble, scribble <br>
-  			scribble, stuff, thing, stuff <br>
-  			more stuff, less stuff, not my stuff <br>
-  		<br><br><br><br><br>
-  	</div>
-</main>
-<footer id="footer">
-  <br><hr><br>
-	gDash was created by Gary A. Newsome, in cahoots with Paul Scarrone and SavvySoftWorks.<br>
-  &copy2016
-</footer>
-<script src="gdash0321.js"></script>
-</body>
+            </div>
+        </main>
+        <footer id="footer">
+            <br/>
+            <hr/>
+            <br/>
+            gDash was created by Gary A. Newsome, in cahoots with Paul Scarrone and SavvySoftWorks.
+            <br/>
+            &copy2016
+        </footer>
+        <!--
+        <script src="gdashweather.js">
+        </script>
+        -->
+        <script src="gdashnotes.js">
+        </script>
+    </body>
 </html>

@@ -12,7 +12,7 @@ var buildYQLlocationQuery = function(position) {
     var requestZip = new Promise(function(resolve, reject) {
         var query = "SELECT * FROM geo.places WHERE text='(" + position.coords.latitude + ", " + position.coords.longitude + ")'";
         var encodedQuery = encodeURIComponent(query);
-        var uri = "https://query.yahooapis.com/v1/public/yql?q=" + encodedQuery + "&format=json" 
+        var uri = "https://query.yahooapis.com/v1/public/yql?q=" + encodedQuery + "&format=json"
         console.log("buildYQLlocationQuery");
         console.log(uri);
         console.log(encodedQuery);
@@ -44,36 +44,15 @@ var requestWeatherByZip = function(result) {
     })
     return weatherData;
 };
-var showPosition = function(result) {
+var showWeather = function(result) {
     console.log("showPosition");
     console.log(result);
     var current = result.query.results.current_observation.temperature_string;
-    document.getElementById("zip").innerHTML = current;
+    document.getElementById("current").innerHTML = current;
 };
 
-function getWeather() {
-    console.log("getWeather");
-    browserLocation.then(buildYQLlocationQuery).then(requestWeatherByZip).then(showPosition);
-    store.lastRequestTime = new Date().getTime();
-}
 console.log("The Promise Land");
 var browserLocation = new Promise(getLocation);
-// if time 15 min (15*60*1000)
-var store = localStorage;
-if (store.lastRequestTime) {
-    var lastRequestTime = store.lastRequestTime;
-    var currentTime = new Date().getTime();
-    var lastRequestExpired = lastRequestTime + (15 * 60 * 1000);
-    if (lastRequestExpired < currentTime) {
-        getWeather();
-    } else {
-        var result = {};
-        result.query = {};
-        result.query.results = {};
-        result.query.results.current_observation = {};
-        result.query.results.current_observation.temperature_string = store.temperature_string;
-        showPosition(result);
-    }
-} else {
-    getWeather();
-}
+browserLocation.then(buildYQLlocationQuery)
+               .then(requestWeatherByZip)
+               .then(showWeather);

@@ -62,6 +62,19 @@ body {
   #notes:last-child {
     margin-right: 0; }
 
+#myNotes {
+  display: block;
+  margin: 10px;
+  padding: 10px; }
+
+#saveButton {
+  background-color: #EEEEEE;
+  margin: 5px;
+  padding: 10px;
+  border: 3px solid #800000;
+  border-radius: .625em;
+  font-size: 1.1em; }
+
 #footer {
   float: left;
   display: block;
